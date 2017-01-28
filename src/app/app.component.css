@@ -1,0 +1,11 @@
+.medium-card-width {
+    width: 500px;
+    margin: 20px;
+}
+
+.card-header {
+    background-color: lightgray;
+    margin: 0;
+
+}
+

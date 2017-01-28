@@ -1,10 +1,12 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
-import { FormsModule } from '@angular/forms';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { HttpModule } from '@angular/http';
+import { MaterialModule } from '@angular/material'
 import { AppRoutingModule } from './app-routing.module';
 
 import { AppComponent } from './app.component';
+import 'hammerjs';
 
 @NgModule({
   declarations: [
@@ -13,8 +15,10 @@ import { AppComponent } from './app.component';
   imports: [
     BrowserModule,
     FormsModule,
+    ReactiveFormsModule,
     HttpModule,
-    AppRoutingModule
+    AppRoutingModule,
+    MaterialModule.forRoot()
   ],
   providers: [],
   bootstrap: [AppComponent]

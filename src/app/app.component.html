@@ -1,4 +1,56 @@
-<h1>
-  {{title}}
-</h1>
-<router-outlet></router-outlet>
+<md-toolbar color="primary">
+  <span><md-icon class="example-spacer">home</md-icon></span>
+  <span>&nbsp;Material Application</span>
+  <span class="example-spacer"></span>
+  <button md-button>TOGGLE DARK THEME</button>
+</md-toolbar>
+<md-card class="medium-card-width">
+  <h3>
+    <md-card-header>{{title}}</md-card-header>
+  </h3>
+  <form #f="ngForm"
+        (ngSubmit)="onSubmit(f.value)">
+    <md-card-content>
+      <md-input-container>
+        <input md-input type="text" id="firstName" name="firstName" ngModel placeholder="First Name" value="Fred" maxlength="40"/>
+      </md-input-container>
+      &nbsp;
+      <md-input-container>
+        <input md-input type="text" id="lastName" name="lastName" ngModel placeholder="Last Name" value="Garvin" maxlength="50"/>
+      </md-input-container>
+      <p></p>
+      <md-input-container>
+        <input md-input type="date" id="birthDate" name="birthDate" ngModel placeholder="Birth Date"/>
+      </md-input-container>
+      <p></p>
+      <md-input-container>
+        <input md-input type="password" id="password" name="password" ngModel placeholder="Password"/>
+      </md-input-container>
+      &nbsp;
+      <md-input-container>
+        <input md-input type="email" id="email" name="email" ngModel placeholder="Email"/>
+      </md-input-container>
+      <p></p>
+      <md-input-container>
+        <input md-input type="number" id="number" name="number" ngModel placeholder="Number"/>
+      </md-input-container>
+      &nbsp;
+      <md-input-container>
+        <input md-input type="search" id="search" name="search" ngModel placeholder="Search"/>
+      </md-input-container>
+      <p></p>
+      <md-input-container>
+        <input md-input type="tel" id="telephone" name="telephone" ngModel placeholder="Telephone"/>
+      </md-input-container>
+      &nbsp;
+      <md-input-container>
+        <input md-input type="url" id="url" name="url" ngModel placeholder="URL"/>
+      </md-input-container>
+
+    </md-card-content>
+    <md-card-actions>
+      <button type="submit" md-raised-button>Submit</button>
+      <button type="reset" md-raised-button>Reset</button>
+    </md-card-actions>
+  </form>
+</md-card>
